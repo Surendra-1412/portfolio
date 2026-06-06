@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blog | Surendra Reddy</title>
+    <!-- Import Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Main styles -->
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+
+    <!-- Background Canvas System -->
+    <div class="bg-canvas">
+      <div class="bg-blob bg-blob-1"></div>
+      <div class="bg-blob bg-blob-2"></div>
+      <div class="bg-grain"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+      <a href="../index.html" class="header-logo">surendra reddy</a>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+          <!-- Sun icon -->
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon icon -->
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="blog-container">
+      <a href="../index.html" class="back">&larr; back home</a>
+      
+      <div class="blog-header">
+        <h1 class="blog-title">Blog</h1>
+        <p class="blog-subtitle">Thoughts and Projects</p>
+      </div>
+
+      <div class="blog-list" id="blog-posts-list">
+        <p>Loading posts...</p>
+      </div>
+    </div>
+
+    <!-- dynamic Markdown loading & parsing logic -->
+    <script type="text/javascript">
+      // Load all blog posts dynamically
+      fetch('posts.json')
+        .then(response => response.json())
+        .then(posts => {
+          const listContainer = document.getElementById('blog-posts-list');
+          if (!posts || posts.length === 0) {
+            listContainer.innerHTML = '<p>No posts published yet.</p>';
+            return;
+          }
+          listContainer.innerHTML = '';
+          posts.forEach(post => {
+            const article = document.createElement('article');
+            article.className = 'blog-post';
+            article.innerHTML = `
+              <p class="blog-date">${post.date}</p>
+              <h2>
+                <a href="view.html?post=${post.id}">${post.title}</a>
+              </h2>
+            `;
+            listContainer.appendChild(article);
+          });
+        })
+        .catch(err => {
+          console.error("Error loading blog posts:", err);
+          document.getElementById('blog-posts-list').innerHTML = '<p>Error loading blog posts.</p>';
+        });
+
+      // Theme toggle trigger
+      const toggleButton = document.getElementById('theme-toggle');
+      toggleButton.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        let newTheme = 'light';
+        if (currentTheme === 'light') {
+          newTheme = 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+
+      // Smart header hide-on-scroll logic
+      let lastScrollY = window.scrollY;
+      const header = document.querySelector('.site-header');
+      const threshold = 5;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        
+        // Ignore small movements
+        if (Math.abs(currentScrollY - lastScrollY) < threshold) {
+          return;
+        }
+        
+        if (currentScrollY <= 50) {
+          // Always show near the top
+          header.classList.remove('header-hidden');
+        } else if (currentScrollY > lastScrollY) {
+          // Scrolling down
+          header.classList.add('header-hidden');
+        } else {
+          // Scrolling up
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+    </script>
+  </body>
+</html>

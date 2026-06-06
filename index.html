@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Surendra Reddy | Portfolio</title>
+    <!-- Import Google Font for premium feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      // Immediately set theme based on user's preference to prevent flash of light theme
+      (function() {
+        const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+
+    <!-- Background Canvas System -->
+    <div class="bg-canvas">
+      <div class="bg-blob bg-blob-1"></div>
+      <div class="bg-blob bg-blob-2"></div>
+      <div class="bg-grain"></div>
+    </div>
+
+    <div id="dhead" class="container">
+      <!-- Dark/Light Theme Toggle Switch -->
+      <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+          <!-- Sun icon (shows in dark mode) -->
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon icon (shows in light mode) -->
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="row">
+        <div id="dpic">
+          <img src="assets/profile.jpg" class="ppic" alt="Surendra Reddy's Profile Picture" />
+        </div>
+        <div id="ddesc">
+          <h1>Surendra Reddy</h1>
+          <h2>curious</h2>
+          <div id="dico">
+            <a href="https://x.com/Surendraa28" target="_blank" id="link-twitter" title="X (Twitter)">
+              <svg class="iico" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Surendra-1412" target="_blank" id="link-github" title="GitHub">
+              <svg class="iico" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/surendra-reddy-4b820a334/" target="_blank" id="link-linkedin" title="LinkedIn">
+              <svg class="iico" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+
+            <svg class="iico" viewBox="0 0 24 24" fill="currentColor" id="iemail" style="cursor: pointer;" title="click to reveal" alt="Email">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <div id="demail"></div> <!-- will reveal email -->
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Bio Section -->
+    <div id="bio" class="container">
+      <div class="ctitle">bio</div>
+        <p>
+          Hi, I am a 19-year-old student and curious mind driven by an intense desire to understand how things work from first principles. Rather than restricting my focus to a single domain, I pursue what I love, guided by a deep curiosity to uncover the underlying mechanisms beneath systems.
+        </p>
+        <p>
+          I am highly interested in entrepreneurship and the potential of translating ideas into realities. My academic and personal explorations span unmanned aerial vehicles (UAVs), cybersecurity, programming, and mathematics. I enjoy dismantling complex ideas down to their fundamental truths, investigating layers of security, and building things from the ground up to understand them fundamentally.
+        </p>
+    </div>
+
+    <!-- Experience Timeline Section -->
+    <div id="history" class="container">
+      <div class="ctitle">education <span class="standard-amp">&amp;</span> experience</div>
+      
+      <div id="experience-list">
+        <div class="entry row">
+          <div class="timespan">2025 -</div>
+          <div class="ico">
+            <div class="entry-dot"></div>
+            <img src="assets/iiitdm_logo.png" alt="IIITDM Kurnool Logo" />
+          </div>
+          <div class="desc">
+            Studying Bachelor of Technology (B.Tech) at <a href="https://iiitk.ac.in/" target="_blank"><strong>Indian Institute of Information Technology Design & Manufacturing, Kurnool</strong></a>.
+          </div>
+        </div>
+        
+        <div class="entry row">
+          <div class="timespan">2018-2025</div>
+          <div class="ico">
+            <div class="entry-dot"></div>
+          </div>
+          <div class="desc">
+            Attended <a href="https://montessoriindus.in/" target="_blank"><strong>Montessori Indus E.M. High School</strong></a>.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section (Uses the premium Card Grid Layout) -->
+    <div class="bg-section">
+      <div id="featured-talks" class="container">
+        <div class="ctitle">projects</div>
+        <div class="row" id="projects-grid">
+          <!-- Project Card 1 (Disaster UAV) -->
+          <a href="blog/view.html?post=disaster-uav" class="card project-card-custom" style="text-decoration: none; color: inherit;">
+            <div class="img-container">
+              <div class="uav-carousel">
+                <div class="carousel-slides">
+                  <img src="assets/uav_project.png" class="carousel-slide active" alt="Disaster Management UAV - Full Assembly" />
+                  <img src="assets/uav_sensor_node.png" class="carousel-slide" alt="Disaster Management UAV - Sensor Node Setup" />
+                  <img src="assets/uav_power_diagram.png" class="carousel-slide" alt="Disaster Management UAV - Power Diagram" />
+                </div>
+                <div class="carousel-dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="text-container">
+              <div class="project-title">Disaster Management UAV</div>
+              <div class="project-desc">
+                As project lead, I directed the development of a high-stability hexacopter for environmental intelligence in hazardous zones. Created for our Design Realisation Practice, the drone integrates a carbon-fiber frame, a Pixhawk 4 autopilot, and an ESP32 sensor node to monitor gas levels and climate conditions. We implemented a custom data-smoothing algorithm to transmit steady, real-time telemetry over 4G to Blynk Cloud. Our successful field trials demonstrated real-time hazard detection, earning high commendation from our professor.
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Section (Nisarga Style) -->
+    <div class="bg-section featured-writing-section" id="blog-section">
+      <div class="container">
+        <div class="ctitle">blog</div>
+        <div style="margin-bottom: 20px; font-size: 16px; color: var(--text-color);">Thoughts and Projects</div>
+        
+        <div class="blog-list-custom" id="home-blog-list">
+          <p>Loading posts...</p>
+        </div>
+        
+        <div style="margin-top: 25px; text-align: left;">
+          <a href="blog/index.html" class="view-all-blogs-link" style="font-weight: 500; color: var(--accent-color);">view all posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- email reveal decryption script -->
+    <script type="text/javascript">
+      const rot13 = (message) => {
+        const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+        return message.replace(/[a-z]/gi, letter => alpha[alpha.indexOf(letter) + 13]);
+      }
+      var e_is_shown = false;
+      document.getElementById('iemail').addEventListener("click", function(){
+        let demail = document.getElementById('demail');
+        let encodedEmail = "fheraqenerqqll44@tznvy.pbz";
+        let email = rot13(encodedEmail);
+        demail.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+        demail.style.opacity = e_is_shown ? 0 : 1;
+        e_is_shown = !e_is_shown;
+      });
+
+      // Dark Mode / Light Mode toggle handler
+      const toggleButton = document.getElementById('theme-toggle');
+      toggleButton.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        let newTheme = 'light';
+        if (currentTheme === 'light') {
+          newTheme = 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+
+      // Load blog posts dynamically
+      fetch('blog/posts.json')
+        .then(response => response.json())
+        .then(posts => {
+          const listContainer = document.getElementById('home-blog-list');
+          if (!posts || posts.length === 0) {
+            listContainer.innerHTML = '<p>No posts published yet.</p>';
+            return;
+          }
+          listContainer.innerHTML = '';
+          // Display up to 5 posts
+          posts.slice(0, 5).forEach(post => {
+            const article = document.createElement('article');
+            article.className = 'blog-post-custom';
+            article.innerHTML = `
+              <p class="blog-date-custom">${post.date}</p>
+              <h3>
+                <a href="blog/view.html?post=${post.id}">${post.title}</a>
+              </h3>
+            `;
+            listContainer.appendChild(article);
+          });
+        })
+        .catch(err => {
+          console.error("Error loading blog posts:", err);
+          document.getElementById('home-blog-list').innerHTML = '<p>Error loading blog posts.</p>';
+        });
+
+      // Manual Scroll-Snap Carousel inside UAV Project Card
+      (function() {
+        const container = document.querySelector('.uav-carousel .carousel-slides');
+        const slides = document.querySelectorAll('.uav-carousel .carousel-slide');
+        const dots = document.querySelectorAll('.uav-carousel .dot');
+        if (!container || slides.length === 0) return;
+        
+        // Update active dots when scrolled (for manual swiping/gestures)
+        container.addEventListener('scroll', () => {
+          const width = container.clientWidth;
+          const scrollLeft = container.scrollLeft;
+          const activeIndex = Math.round(scrollLeft / width);
+          
+          dots.forEach((dot, i) => {
+            if (i === activeIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        });
+        
+        // Click dots to scroll to that slide
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const width = container.clientWidth;
+            container.scrollTo({
+              left: index * width,
+              behavior: 'smooth'
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

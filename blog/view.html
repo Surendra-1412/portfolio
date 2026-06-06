@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Surendra Reddy | Blog Post</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Main styles -->
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <!-- Marked.js Markdown Parser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <style>
+    /* Nisarga Post Specific Layout overrides */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .post-container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 140px 24px 100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 641px) {
+      .post-container {
+        padding: 160px 32px 100px;
+      }
+    }
+
+    .post-back {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .post-back:hover {
+      color: var(--text-color);
+      opacity: 1;
+    }
+
+    .post-header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+    }
+
+    .post-title {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 3rem;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--text-color);
+    }
+
+    @media (max-width: 640px) {
+      .post-title {
+        font-size: 2.25rem;
+      }
+    }
+
+    .post-date {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    .post-content {
+      color: var(--text-color);
+    }
+
+    .post-content p {
+      margin-bottom: 24px;
+      line-height: 1.75;
+    }
+
+    .post-content h2,
+    .post-content h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--text-color);
+      margin-top: 40px;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .post-content h2 {
+      font-size: 1.8rem;
+    }
+
+    .post-content h3 {
+      font-size: 1.4rem;
+    }
+
+    .post-content ul,
+    .post-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+
+    .post-content li {
+      margin-bottom: 8px;
+    }
+
+    .post-content code {
+      font-family: 'SF Mono', ui-monospace, Monaco, monospace;
+      background-color: var(--bg-section-color);
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 85%;
+      color: var(--text-color);
+    }
+
+    .post-content pre {
+      background-color: var(--bg-section-color);
+      padding: 20px 24px;
+      border-radius: 12px;
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      margin: 24px 0;
+    }
+
+    .post-content pre code {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+
+    .post-content img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 24px 0;
+      border: 1px solid var(--card-border);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Canvas System -->
+  <div class="bg-canvas">
+    <div class="bg-grain"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <a href="../index.html" class="header-logo">surendra reddy</a>
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <!-- Sun icon -->
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon icon -->
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <div class="post-container">
+    <a href="../index.html" class="post-back">&larr; back home</a>
+
+    <header class="post-header">
+      <h1 class="post-title" id="rendered-title">Loading...</h1>
+      <p class="post-date" id="rendered-date"></p>
+    </header>
+
+    <article class="post-content" id="rendered-content">
+      <p>Loading blog content...</p>
+    </article>
+  </div>
+
+  <!-- dynamic Markdown loading & parsing logic -->
+  <script type="text/javascript">
+    // 1. Get post parameter from URL (e.g. view.html?post=disaster-uav)
+    const urlParams = new URLSearchParams(window.location.search);
+    const postName = urlParams.get('post') || 'disaster-uav';
+
+    // 2. Fetch the corresponding markdown file from posts/
+    fetch(`posts/${postName}.md`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Post not found");
+        }
+        return response.text();
+      })
+      .then(markdown => {
+        let title = "Blog Post";
+        let date = "";
+        let content = markdown;
+
+        // Parse Jekyll-style YAML front matter if present
+        if (markdown.startsWith("---")) {
+          const parts = markdown.split("---");
+          if (parts.length >= 3) {
+            const yaml = parts[1];
+            content = parts.slice(2).join("---");
+
+            const lines = yaml.split("\n");
+            for (let line of lines) {
+              const sepIndex = line.indexOf(":");
+              if (sepIndex !== -1) {
+                const key = line.slice(0, sepIndex).trim();
+                const val = line.slice(sepIndex + 1).trim();
+                if (key === "title") title = val.replace(/^["']|["']$/g, '');
+                if (key === "date") date = val.replace(/^["']|["']$/g, '');
+              }
+            }
+          }
+        }
+
+        // Render document fields
+        document.getElementById('rendered-title').innerText = title;
+        document.title = `${title} | Surendra Reddy`;
+        document.getElementById('rendered-date').innerText = date;
+
+        // Parse Markdown to HTML using marked.js
+        document.getElementById('rendered-content').innerHTML = marked.parse(content);
+      })
+      .catch(err => {
+        document.getElementById('rendered-title').innerText = "Post Not Found";
+        document.getElementById('rendered-content').innerHTML = `<p>Sorry, the post <code>blog/posts/${postName}.md</code> could not be loaded.</p>`;
+      });
+
+    // 3. Theme toggle trigger
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      let newTheme = 'light';
+      if (currentTheme === 'light') {
+        newTheme = 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Smart header hide-on-scroll logic
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector('.site-header');
+    const threshold = 5;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      // Ignore small movements
+      if (Math.abs(currentScrollY - lastScrollY) < threshold) {
+        return;
+      }
+      
+      if (currentScrollY <= 50) {
+        // Always show near the top
+        header.classList.remove('header-hidden');
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        header.classList.add('header-hidden');
+      } else {
+        // Scrolling up
+        header.classList.remove('header-hidden');
+      }
+      
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+  </script>
+</body>
+
+</html>
