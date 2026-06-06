@@ -800,3 +800,19 @@ main:not(.hero), .post-container, .blog-container {
     font-style: normal !important;
     font-weight: 400;
 }
+
+@media (max-width: 767px) {
+    .timespan {
+        grid-column: span 3;
+        font-size: 13px;
+        padding-right: 8px;
+    }
+    .ico {
+        grid-column: span 1;
+    }
+    .desc {
+        grid-column: span 8;
+        font-size: 15px;
+        padding-left: 15px;
+    }
+}
