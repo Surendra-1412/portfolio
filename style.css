@@ -68,7 +68,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: transparent;
+    background-color: var(--bg-color);
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.6;
@@ -79,10 +79,10 @@ body {
 .bg-canvas {
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
     pointer-events: none;
-    background: var(--bg-color);
+    background: transparent;
     transition: background-color 0.8s ease;
 }
 .bg-blob {
@@ -124,6 +124,7 @@ html[data-theme="dark"] .bg-grain {
     padding-left: 15px;
     padding-right: 15px;
     position: relative;
+    z-index: 1;
 }
 @media (min-width: 992px) {
     .container {
@@ -141,6 +142,8 @@ html[data-theme="dark"] .bg-grain {
     padding-top: 1px;
     margin-top: 10px;
     transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 .featured-writing-section {
     margin-top: 50px;
@@ -318,6 +321,8 @@ hr {
     padding: 0;
     margin: 20px 0px 20px 0px;
     border: 0;
+    position: relative;
+    z-index: 1;
 }
 .ico {
     grid-column: span 1;
