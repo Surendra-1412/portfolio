@@ -61,6 +61,10 @@
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
+html {
+    background-color: var(--bg-color);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -802,17 +806,52 @@ main:not(.hero), .post-container, .blog-container {
 }
 
 @media (max-width: 767px) {
+    .entry.row {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 12px;
+        row-gap: 4px;
+    }
     .timespan {
-        grid-column: span 3;
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left !important;
         font-size: 13px;
-        padding-right: 8px;
+        font-weight: 600;
+        color: var(--text-muted);
+        padding-right: 0;
+        white-space: nowrap !important;
     }
     .ico {
-        grid-column: span 1;
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ico::before {
+        left: 11px; /* Center of the 24px column */
+    }
+    .entry:first-child .ico::before {
+        top: 7px; /* Align with the new dot position */
+    }
+    .entry:last-child .ico::before {
+        bottom: calc(100% - 7px); /* Align with the new dot position */
+    }
+    .entry-dot {
+        left: 5px; /* Centered relative to 11px line */
+        top: 7px; /* Align with center of timespan text line */
+    }
+    .ico img {
+        display: none;
     }
     .desc {
-        grid-column: span 8;
+        grid-column: 2;
+        grid-row: 2;
         font-size: 15px;
-        padding-left: 15px;
+        padding-left: 0;
+        padding-bottom: 25px;
     }
 }
