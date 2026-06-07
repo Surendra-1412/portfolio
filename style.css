@@ -582,12 +582,16 @@ hr {
         0 8px 32px rgba(0,0,0,0.08),
         inset 0 1px 0 rgba(255,255,255,0.10);
     transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease;
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: var(--text-color) !important;
     position: relative;
 }
-.project-card-custom:hover {
+.project-card-custom:hover,
+.project-card-custom:focus,
+.project-card-custom:active {
     transform: translateY(-5px) scale(1.005);
+    color: var(--text-color) !important;
+    text-decoration: none !important;
     box-shadow:
         0 4px 16px rgba(0,0,0,0.10),
         0 24px 56px rgba(0,0,0,0.14),
@@ -1062,7 +1066,7 @@ main:not(.hero), .post-container, .blog-container {
     }
     /* Inject logo via a wrapper — handled by showing it via the ico-mobile class */
     .ico-logo-mobile {
-        display: block;
+        display: block !important;
         width: 36px;
         height: 36px;
         object-fit: contain;
