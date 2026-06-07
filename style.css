@@ -6,35 +6,35 @@
     --font-display: 'Outfit', 'Inter', sans-serif;
     --font-mono: 'SF Mono', ui-monospace, Monaco, monospace;
 
-    /* Light mode — crisp warm-white premium feel */
-    --bg-color: #fafaf9;
-    --bg-deep: #f5f3ef;
-    --bg-section-color: rgba(255, 255, 255, 0.72);
-    --text-color: #111110;
-    --text-muted: #6b6965;
-    --text-italic: #8a8580;
+    /* Light mode — premium cool-white / blue-gray theme */
+    --bg-color: #f6f9fc;
+    --bg-deep: #edf2f7;
+    --bg-section-color: rgba(255, 255, 255, 0.75);
+    --text-color: #0f172a;
+    --text-muted: #475569;
+    --text-italic: #64748b;
     --accent-color: #2563eb;
     --accent-glow: rgba(37, 99, 235, 0.18);
-    --border-color: rgba(17, 17, 16, 0.07);
-    --border-subtle: rgba(17, 17, 16, 0.04);
-    --timeline-line: #c9c6c0;
-    --card-bg: rgba(255, 255, 255, 0.82);
-    --card-border: rgba(17, 17, 16, 0.07);
+    --border-color: rgba(15, 23, 42, 0.08);
+    --border-subtle: rgba(15, 23, 42, 0.04);
+    --timeline-line: #cbd5e1;
+    --card-bg: rgba(255, 255, 255, 0.86);
+    --card-border: rgba(15, 23, 42, 0.08);
     --card-glow: rgba(37, 99, 235, 0.06);
     --pub-venue-color: #2563eb;
-    --hr-gradient-start: rgba(17, 17, 16, 0);
-    --hr-gradient-mid: rgba(17, 17, 16, 0.12);
-    --hr-gradient-end: rgba(17, 17, 16, 0);
+    --hr-gradient-start: rgba(15, 23, 42, 0);
+    --hr-gradient-mid: rgba(15, 23, 42, 0.12);
+    --hr-gradient-end: rgba(15, 23, 42, 0);
     --toggle-bg: rgba(255, 255, 255, 0.9);
-    --toggle-color: #111110;
+    --toggle-color: #0f172a;
     --toggle-hover-bg: #ffffff;
-    --link-color: #8a8580;
+    --link-color: #64748b;
     /* Aurora blobs for light mode — strong blue/indigo tint */
-    --blob-1-color: rgba(99, 140, 255, 0.50);
-    --blob-2-color: rgba(147, 112, 255, 0.38);
-    --blob-3-color: rgba(80, 210, 180, 0.28);
-    --blob-4-color: rgba(255, 180, 150, 0.22);
-    --mesh-opacity: 0.018;
+    --blob-1-color: rgba(99, 140, 255, 0.52);
+    --blob-2-color: rgba(147, 112, 255, 0.40);
+    --blob-3-color: rgba(80, 210, 180, 0.30);
+    --blob-4-color: rgba(255, 180, 150, 0.24);
+    --mesh-opacity: 0.022;
 }
 
 [data-theme="dark"] {
